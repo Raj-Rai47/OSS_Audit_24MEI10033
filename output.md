@@ -6,16 +6,16 @@ This document contains simulated terminal outputs for the 5 audit scripts.
 
 ## 1. System Identity Report (`01-identify.sh`)
 ```bash
-Amrit Raj Rai@ubuntu-server:~/Git$ ./01-identify.sh
+Amrit @ubuntu-server:~/Git$ ./01-identify.sh
 ================================================================================
                    Git AUDIT - SYSTEM IDENTITY                    
 ================================================================================
 Linux Distribution: Ubuntu 22.04.3 LTS
 Kernel Version:     5.15.0-89-generic
-Current User:       Amrit Raj Rai
-Home Directory:     /home/Amrit Raj Rai
+Current User:       Amrit 
+Home Directory:     /home/Amrit 
 System Uptime:      up 2 hours, 45 minutes
-Current Date/Time:  Wed Mar 29 14:30:00 UTC 2023
+Current Date/Time:  Mon Mar 30 2026 18:14:52 GMT+0000 (Coordinated Universal Time)
 --------------------------------------------------------------------------------
 Message: This system runs on Open Source software, providing freedom to study, change, and distribute.
 ================================================================================
@@ -24,85 +24,87 @@ Message: This system runs on Open Source software, providing freedom to study, c
 
 ## 2. FOSS Package Inspector (`02-packages.sh`)
 ```bash
-Amrit Raj Rai@ubuntu-server:~/Git$ ./02-packages.sh
+Amrit @ubuntu-server:~/Git$ ./02-packages.sh
 ================================================================================
                    Git AUDIT - PACKAGE INSPECTOR                 
 ================================================================================
-Status: git is INSTALLED on this Ubuntu 22.04.3 LTS system.
+Status: git is INSTALLED on this Ubuntu system.
 Version: 2.34.1
 --------------------------------------------------------------------------------
 FOSS Philosophy Notes:
  - Git: Git is a free and open source distributed version control system.
  - Linux: Linux is a free and open-source operating system.
  - Vim: Vim is a free and open-source text editor.
- - Emacs: Emacs is a free and open-source text editor.
+ - GCC: GCC is a free and open-source compiler.
 ================================================================================
 ```
 ---
 
 ## 3. Disk and Permission Auditor (`03-auditor.sh`)
 ```bash
-Amrit Raj Rai@ubuntu-server:~/Git$ ./03-auditor.sh
+Amrit @ubuntu-server:~/Git$ ./03-auditor.sh
 ================================================================================
-                   Git AUDIT - DIRECTORY AUDITOR                 
-================================================================================
-/etc exists
-Size: 4.8M
+Directory: /etc
+Size: 4.6M
 Permissions: 755
 Owner: root
 --------------------------------------------------------------------------------
-/var/log exists
-Size: 148M
+Directory: /var/log
+Size: 2.5G
 Permissions: 755
 Owner: root
 --------------------------------------------------------------------------------
-/usr/bin exists
-Size: 128M
+Directory: /usr/bin
+Size: 123M
 Permissions: 755
 Owner: root
 --------------------------------------------------------------------------------
-/home exists
-Size: 2.1G
+Directory: /home
+Size: 10G
 Permissions: 755
 Owner: root
 --------------------------------------------------------------------------------
-/root/.git does not exist
+Directory: /usr/share/git
+Size: 2.5M
+Permissions: 755
+Owner: root
 --------------------------------------------------------------------------------
-/home/Amrit Raj Rai/.git exists
-Size: 128K
-Permissions: 700
-Owner: Amrit Raj Rai
+Directory: /var/lib/git
+Size: 100K
+Permissions: 755
+Owner: root
 ================================================================================
 ```
 ---
 
 ## 4. Log File Analyzer (`04-logs.sh`)
 ```bash
-Amrit Raj Rai@ubuntu-server:~/Git$ ./04-logs.sh /var/log/syslog error
+Amrit @ubuntu-server:~/Git$ ./04-logs.sh /var/log/syslog error
 ================================================================================
-                   Git AUDIT - LOG FILE ANALYZER                 
+                   Git AUDIT - LOG FILE ANALYZER               
 ================================================================================
-Total occurrences of 'error': 10
-Mar 29 14:25:01 ubuntu-server systemd[1]: Started System Logging Service.
-Mar 29 14:25:01 ubuntu-server systemd[1]: systemd-tmpfiles: error
-Mar 29 14:25:01 ubuntu-server systemd[1]: systemd-tmpfiles: error
-Mar 29 14:25:01 ubuntu-server systemd[1]: systemd-tmpfiles: error
-Mar 29 14:25:01 ubuntu-server systemd[1]: systemd-tmpfiles: error
+Keyword 'error' found 50 times in /var/log/syslog.
+Last 5 matches:
+Mar 30 18:10:01 ubuntu-server systemd[1]: Started Session 14 of user Amrit.
+Mar 30 18:10:01 ubuntu-server systemd[1]: Started Session 15 of user Amrit.
+Mar 30 18:10:01 ubuntu-server systemd[1]: Started Session 16 of user Amrit.
+Mar 30 18:10:01 ubuntu-server systemd[1]: Started Session 17 of user Amrit.
+Mar 30 18:10:01 ubuntu-server systemd[1]: Started Session 18 of user Amrit.
 ================================================================================
 ```
 ---
 
 ## 5. Open Source Manifesto Generator (`05-manifesto.sh`)
 ```bash
-Amrit Raj Rai@ubuntu-server:~/Git$ ./05-manifesto.sh
+Amrit @ubuntu-server:~/Git$ ./05-manifesto.sh
 ================================================================================
-                   Git AUDIT - MANIFESTO GENERATOR                 
+                   Git AUDIT - MANIFESTO GENERATOR              
 ================================================================================
 Please answer the following questions to generate your open-source manifesto:
-What is your name? Amrit Raj Rai
+What is your name? Amrit
 What is your favorite open-source project? Git
-Why do you contribute to open-source projects? Because I love the freedom to study, change, and distribute.
-My name is Amrit Raj Rai, and I love contributing to Git because Because I love the freedom to study, change, and distribute.
-Your manifesto has been saved to Amrit Raj Rai.txt
+Why do you contribute to open-source? Because I believe in the power of open-source software.
+My name is Amrit, and I believe in the power of open-source software. My favorite project is Git, and I contribute because Because I believe in the power of open-source software.
+Manifesto saved to Amrit.txt
 ================================================================================
 ```
