@@ -1,25 +1,17 @@
 #!/bin/bash
-# Author: Amrit Raj Rai (24MEI10033)
+# Author: Amrit  (24MEI10033)
+# Purpose: Open Source Manifesto Generator
 
 echo "================================================================================"
-
-echo "                   Git AUDIT - MANIFESTO GENERATOR                "
-
+echo "                   Git AUDIT - MANIFESTO GENERATOR             "
 echo "================================================================================"
 
 echo "Please answer the following questions to generate your open-source manifesto:"
+read -p "What is your name? " name
+read -p "What is your favorite open-source project? " project
+read -p "Why do you contribute to open-source? " reason
+echo "My name is $name, and I believe in the power of open-source software. My favorite project is $project, and I contribute because $reason."
 
-echo -n "What is your name? "
-read name
-
-echo -n "What is your favorite open-source project? "
-read project
-
-echo -n "Why do you contribute to open-source projects? "
-read reason
-
-echo "My name is $name, and I love contributing to $project because $reason." > $(whoami).txt
-
-echo "Your manifesto has been saved to $(whoami).txt"
-
+echo "Manifesto saved to $(whoami).txt"
+echo "My name is $name, and I believe in the power of open-source software. My favorite project is $project, and I contribute because $reason." > $(whoami).txt
 echo "================================================================================"
